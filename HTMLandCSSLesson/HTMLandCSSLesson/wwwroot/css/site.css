@@ -1,0 +1,24 @@
+﻿input[type="text"], [type="password"], textarea, div {
+    background-color: lightcyan;
+    color: purple
+}
+
+input[type="button"] {
+    background-color: aqua
+}
+
+td {
+    background-color: burlywood
+}
+
+#header1 {
+    background-color: aliceblue
+}
+
+#id1 {
+    background-color: chartreuse
+}
+
+#someform {
+    background-color: azure
+}

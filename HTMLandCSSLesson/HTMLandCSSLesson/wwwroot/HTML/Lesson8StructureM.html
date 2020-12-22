@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <ul id="roomList">
+        <li>Room A</li>
+        <li>Room B</li>
+    </ul>
+
+    <form id="frm1">
+    </form>
+
+    <input type="button" value="New Text Box" onclick="AddTextBox()" />
+    <br />
+    New Room Name: <input type="text" id="roomId" />
+    <br />
+    <input type="button" value="Add a room" onclick="AddRoom()" />
+    <br />
+
+    <script>
+        function AddTextBox() {
+            var frm = document.getElementById("frm1");
+            var newInput = document.createElement("input");
+            var newBr = document.createElement("br");
+            newInput.type = "text";
+            frm.appendChild(newInput);
+            frm.appendChild(newBr);
+        }
+
+        function AddRoom() {
+            // Step 1 - We get the reference of the list
+            var list = document.getElementById("roomList");
+
+            // Step 2 - We create the new elements
+            var newItem = document.createElement("li");
+            var newRoom = document.getElementById("roomId");
+
+            newItem.textContent = newRoom.value;
+            if (newRoom.value == "") {
+                alert("Room name cannot be left blank!");
+            }
+            else {
+                // Step 3 - We add the LI element to the UL list
+                list.appendChild(newItem);
+                newRoom.value = ""; // clears the text
+            }
+        }
+    </script>
+</body>
+</html>

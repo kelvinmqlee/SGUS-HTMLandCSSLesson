@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="Init()">
+    <input type="text" id="txt1" placeholder="Enter Name Here" onfocus="Focus(this)" onblur="Blur(this)" />
+    <br />
+    <input type="text" id="txt2" placeholder="Enter Address Here" onfocus="Focus(this)" onblur="Blur(this)" onkeypress="KeyPressed()" onchange="Change()" />
+    <br />
+
+    <script>
+        function Init() {
+            alert("Initialized!");
+        }
+
+        function Focus(txt) {
+            alert("Being Focused!");
+            txt.style.background = "aqua";
+        }
+
+        function Blur(txt) {
+            alert("Blurred...");
+            txt.style.background = "white";
+        }
+
+        function Change() {
+            alert("Changed~");
+        }
+
+        function KeyPressed() {
+            alert("Key pressed...");
+            
+        }
+    </script>
+</body>
+</html>

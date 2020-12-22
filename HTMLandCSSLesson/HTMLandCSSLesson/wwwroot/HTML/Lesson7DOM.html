@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="frmid1"> <!-- forms[0] -->
+        Name: <input type="text" id="nameid1" /><br /> <!-- elements[0] -->
+        Amount: <input type="text" id="amountid1" /> <!-- elements[1] -->
+    </form>
+    <br />
+    <form id="frmid2"> <!-- forms[1] -->
+        Name: <input type="text" id="nameid2" /><br /> <!-- elements[0] -->
+        Amount: <input type="text" id="amountid2" /> <!-- elements[1] -->
+    </form>
+    <br />
+    <input type="button" value="See Data" onclick="SimpleDOM()" /><br />
+    <input type="button"value="Get Query" onclick="QueryDOM()" />
+
+    <script>
+        function SimpleDOM() {
+            // document.forms[0].nameid1
+            // document.forms["frmid1"].nameid1
+            // document.getElementById("nameid1")
+            alert(window.document.forms[0].elements["nameid1"].value);
+            alert(window.document.forms["frmid1"].elements[1].value);
+            alert(window.document.forms["frmid2"].elements[0].value);
+            alert(window.document.forms[1].elements["amountid2"].value);
+            alert(document.getElementById("nameid1").value);
+            // window.document.forms[1].elements["nameid2"].value = "Changed to newShiv";
+        }
+
+        function QueryDOM() {
+            var selected = document.querySelector("input[type=text]");
+            alert(selected.value); // single element
+
+            var selectedAll = document.querySelectorAll("input[type=text]");
+            // For Loop of JavaScript Selected All alert
+            for (var i = 0; i <= selectedAll.length; i++) {
+                var temp = selectedAll[i];
+                alert(temp.value); // multiple elements
+            }
+        }
+    </script>
+</body>
+</html>
