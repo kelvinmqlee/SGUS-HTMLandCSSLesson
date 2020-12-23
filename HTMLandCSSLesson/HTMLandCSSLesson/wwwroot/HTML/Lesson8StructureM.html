@@ -39,8 +39,9 @@
             var newRoom = document.getElementById("roomId");
 
             newItem.textContent = newRoom.value;
-            if (newRoom.value == "") {
+            if (newRoom.value.length == 0) {
                 alert("Room name cannot be left blank!");
+                return false;
             }
             else {
                 // Step 3 - We add the LI element to the UL list

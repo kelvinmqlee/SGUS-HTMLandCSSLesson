@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="someserver" method="post" onsubmit="return CheckValidation()">
+        Name: <input type="text" id="nameId" placeholder="Enter your name" required />
+        <br />
+        Age: <input type="number" id="ageId" required />
+        <br />
+        NRIC: <input type="text" id="nricId" placeholder="Enter your NRIC" required 
+                     title="eg. S1234567A" />
+        <br />
+        Email: <input type="email" id="emailId" placeholder="Enter your Email address" />
+        <br />
+        <input type="button" value="Validate" onclick="CheckValidation()" />
+        <br />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+        //function CallMe() {
+        //    const url = "SomeServer";
+        //    const request = new XMLHttpRequest();
+        //    request.open("POST", url); // post call through JavaScript
+        //}
+
+        function CheckNRIC(value, errormessage) {
+            // have to use / / instead of " " to contain pattern - regular expression (regex)
+            var nricexpression = /^[S|T|F|G]{1,1}[\d]{7,7}[A-Z]{1,1}$/;
+            
+            if (value.search(nricexpression) == -1) {
+                alert(errormessage);
+                return false;
+            }
+            return true;
+        }
+
+        function CheckRequired(value, errormessage) {
+            if (value.length == 0) {
+                alert(errormessage);
+                return false; // not executing anything after this
+            }
+            return true;
+        }
+
+        function CheckValidation() {
+            // get access to the textbox
+            var nameId = document.getElementById("nameId");
+            var ageId = document.getElementById("ageId");
+            var nricId = document.getElementById("nricId");
+
+            if (CheckNRIC(nricId.value, "NRIC is not in correct format") == false) {
+                return false;
+            }
+            // check length == 0
+            if (CheckRequired(nameId.value, "Name cannot be left empty") == false) {
+                return false; // stops executions
+            }
+            if (CheckRequired(ageId.value, "Age cannot be left blank") == false) {
+                return false;
+            }
+            if (CheckRequired(nricId.value, "Your NRIC is required") == false) {
+                return false;
+            }
+            //if (nameId.value.length == 0) {
+            //    alert("Name cannot be left blank"); // display message
+            //    return false; // if length == zero, then false
+            //}
+            return true; // else true
+
+            // JavaScript to submit call
+        }
+    </script>
+</body>
+</html>

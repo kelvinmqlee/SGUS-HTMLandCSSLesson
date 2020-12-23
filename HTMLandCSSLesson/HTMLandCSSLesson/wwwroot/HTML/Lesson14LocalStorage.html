@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="button" value="Write Session" onclick="WriteSession()" />
+    <br />
+    <input type="button" value="Read Session" onclick="ReadSession()" />
+    <br />
+    <input type="button" value="Write Local" onclick="WriteLocal()" />
+    <br />
+    <input type="button" value="Read Local" onclick="ReadLocal()" />
+    <br />
+    <input type="button" value="Clear Local" onclick="ClearLocal()" />
+    <br />
+
+    <script>
+        function WriteSession() {
+            sessionStorage.setItem("name", "Kelvin");
+        }
+
+        function ReadSession() {
+            var data = sessionStorage.getItem("name");
+            alert(data);
+        }
+
+        function WriteLocal() {
+            localStorage.setItem("code", "123");
+        }
+
+        function ReadLocal() {
+            var data = localStorage.getItem("code");
+            alert(data);
+        }
+
+        function ClearLocal() {
+            localStorage.clear();
+        }
+    </script>
+</body>
+</html>

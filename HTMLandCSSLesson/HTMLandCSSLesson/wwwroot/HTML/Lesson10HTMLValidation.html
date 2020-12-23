@@ -14,11 +14,11 @@
         <br />
         Mobile Number: <input type="tel" />
         <br />
-        Email: <input type="email" required pattern="[A-Za-z0-9]{1,50}[@]{1,1}[A-Za-z0-9]{1,50}[.]{1,1}[A-Za-z]{3,3}"
+        Email: <input type="email" required pattern="[A-Za-z0-9]{1,50}@[A-Za-z0-9]{1,50}.[a-z]{3,3}"
                       title="Eg. test123@google.com" />
         <br />
-        Citizenship Card Number: <input type="text" required pattern="^[A-Za-z]{1,1}[0-9]{4,4}$"
-                                        title="Eg. 'A1111'" />
+        NRIC: <input type="text" required pattern="^[A-Z]{1,1}[0-9]{7,7}[A-Z]{1,1}$"
+                     title="Eg. 'S1234567A'" />
         <br />
         <input type="submit" value="Save" />
     </form>
