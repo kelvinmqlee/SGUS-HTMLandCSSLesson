@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Student Registration</title>
+</head>
+<body style="background-image: url('./School.jfif')">
+    <div style="background-image: url('./Students.png'); background-repeat:no-repeat">
+        <table>
+            <tr>
+                <td><font size="3" color="blue">Name: </font></td>
+                <td><input id="txtName" type="text" name="name" value="" /><br /></td>
+            </tr>
+            <tr>
+                <td><font size="3" color="red">Email Address: </font></td>
+                <td><input id="txtEmail" type="text" name="name" value="" /><br /></td>
+            </tr>
+            <tr>
+                <td><font size="3" color="green">Password: </font></td>
+                <td><input id="txtPassword" type="password" name="name" value="" /><br /></td>
+            </tr>
+            <tr>
+                <td><font size="3" color="brown">Retype Password: </font></td>
+                <td><input id="txtRePassword" type="password" name="name" value="" /><br /></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="name" value="Register Student" onclick="CheckPassword()" /></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function CheckPassword() {
+            var password = document.getElementById("txtPassword").value;
+            var repassword = document.getElementById("txtRePassword").value;
+
+            if (!(repassword == password)) {
+                alert("Passwords do not match; please re-enter again");
+                document.getElementById("txtPassword").style.backgroundColor = "red";
+                document.getElementById("txtRePassword").style.backgroundColor = "red";
+            }
+        }
+    </script>
+</body>
+</html>

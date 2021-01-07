@@ -1,0 +1,11 @@
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\bin\Debug\DataAccess.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\bin\Debug\DataAccess.pdb
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\bin\Debug\Model.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\bin\Debug\System.Data.SqlClient.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\bin\Debug\Model.pdb
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\bin\Debug\System.Data.SqlClient.xml
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\obj\Debug\DataAccess.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\DataAccess\obj\Debug\DataAccess.pdb

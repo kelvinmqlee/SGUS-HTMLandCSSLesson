@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="text" id="txtidname" placeholder="Name" />
+    <br />
+    <input type="text" id="txtidaddress" placeholder="Address" />
+    <br />
+    <input type="button" value="Create Customer" onclick="CreateCustomer()" />
+    <br />
+    <input type="button" value="Create Customer With Address" onclick="CreateCustomerWithAddress()" />
+
+    <script>
+        // JavaScript is a dynamic prototypical language
+        // eg. Automobile is based on some prototype
+        // Inheritance -- Prototype
+        function Customer() {
+            this.name = "";
+            this.address = "";
+            this.Check = function () {
+                if (this.name.length == 0) {
+                    alert("Name is required");
+                    return true;
+                }
+                alert("Name: " + this.name);
+            };
+        }
+
+        // C#
+        //class Customer {
+        //    public string name = "";
+        //    public string address = "";
+        //    public void Check() {
+
+        //    }
+        //}
+
+        function CreateCustomer() {
+            // Invocation
+            var cust = new Customer();
+            cust.name = document.getElementById("txtidname").value;
+            cust.address = "";
+            cust.Check();
+        }
+
+        function CreateCustomerWithAddress() {
+            // Invocation
+            // Prototype Method -- not easy!!!
+            //var customeraddress = {};
+            //var cust = new Customer();
+            //customeraddress.prototype = cust; // Complete code of Prototype - Customer
+            //customeraddress.CheckAddress = function () {
+            //    if (this.address.length == 0) {
+            //        alert("Address is required");
+            //        return;
+            //    }
+            //};
+            //customeraddress.Customer.name = document.getElementById("txtidname").value;
+            ////customeraddress.Customer.address = document.getElementById("txtidaddress").value;
+            //customeraddress.Customer.address = "";
+            //customeraddress.Check();
+            //customeraddress.CheckAddress();
+
+            // Invocation
+            // Attaching
+            // Take Customer - automatic Prototype
+            var customeraddress = new Customer();
+            customeraddress.CheckAddress = function () {
+                if (this.address.length == 0) {
+                    alert("Address is required");
+                    return;
+                }
+                alert("Address: " + this.address);
+            };
+            customeraddress.name = document.getElementById("txtidname").value;
+            customeraddress.address = document.getElementById("txtidaddress").value;
+            customeraddress.Check();
+            customeraddress.CheckAddress();
+        }
+    </script>
+</body>
+</html>

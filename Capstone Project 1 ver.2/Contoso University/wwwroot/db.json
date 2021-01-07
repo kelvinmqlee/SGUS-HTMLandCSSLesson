@@ -1,0 +1,201 @@
+{
+  "courses": [
+    {
+      "courseid": "1001",
+      "coursetitle": "Full Stack Development",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "courseid": "1002",
+      "coursetitle": "C#"
+    },
+    {
+      "id": 3,
+      "courseid": "1003",
+      "coursetitle": "JavaScript"
+    },
+    {
+      "id": 4,
+      "courseid": "1004",
+      "coursetitle": "HTML"
+    },
+    {
+      "id": 5,
+      "courseid": "1005",
+      "coursetitle": "JQuery"
+    },
+    {
+      "courseid": "1006",
+      "coursetitle": "JSON",
+      "id": 6
+    },
+    {
+      "courseid": "1007",
+      "coursetitle": "Full Stack Development 2",
+      "id": 7
+    },
+    {
+      "courseid": "1008",
+      "coursetitle": "C++",
+      "id": 8
+    },
+    {
+      "courseid": "1009",
+      "coursetitle": "Angular",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "courseid": "1010",
+      "coursetitle": "SQL Database"
+    },
+    {
+      "courseid": "1011",
+      "coursetitle": "Testing 1",
+      "id": 11
+    },
+    {
+      "courseid": "1012",
+      "coursetitle": "FSD",
+      "id": 12
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "firstname": "Kelvin",
+      "lastname": "Lee",
+      "contact": "91234567",
+      "email": "test@testing.com",
+      "course": "1001 - Full Stack Development",
+      "addate": "Wed, 27-January-2021"
+    },
+    {
+      "id": 2,
+      "firstname": "Tester",
+      "lastname": "1",
+      "contact": "12345678",
+      "email": "123@456.com",
+      "course": "1002 - C#",
+      "addate": "Wed, 13-January-2021"
+    },
+    {
+      "id": 3,
+      "firstname": "Testing",
+      "lastname": "2",
+      "contact": "98765432",
+      "email": "abc@def.com",
+      "course": "1004 - HTML",
+      "addate": "Fri, 15-January-2021"
+    },
+    {
+      "id": 4,
+      "firstname": "Tester",
+      "lastname": "3",
+      "contact": "12312345",
+      "email": "aaa@bbb.com",
+      "course": "1008 - C++",
+      "addate": "Wed, 10-February-2021"
+    },
+    {
+      "id": 5,
+      "firstname": "Testing",
+      "lastname": "4",
+      "contact": "91234567",
+      "email": "312@ccc.com",
+      "course": "1003 - JavaScript",
+      "addate": "Wed, 10-March-2021"
+    },
+    {
+      "id": 6,
+      "firstname": "Test",
+      "lastname": "",
+      "contact": "99112233",
+      "email": "aaa@bbbbb.com",
+      "course": "1004 - HTML",
+      "addate": "Tue, 12-January-2021"
+    },
+    {
+      "id": 7,
+      "firstname": "Kelvin",
+      "lastname": "Lee",
+      "contact": "91234567",
+      "email": "123@456.com",
+      "course": "1007 - Full Stack Development 2",
+      "addate": "Sun, 24-January-2021"
+    },
+    {
+      "id": 8,
+      "firstname": "Tester",
+      "lastname": "3",
+      "contact": "91234567",
+      "email": "312@ccc.com",
+      "course": "1003 - JavaScript",
+      "addate": "Wed, 27-January-2021"
+    },
+    {
+      "id": 9,
+      "firstname": "Tester",
+      "lastname": "asdasdasd",
+      "contact": "91234567",
+      "email": "123@456.com",
+      "course": "1004 - HTML",
+      "addate": "Tue, 19-January-2021"
+    },
+    {
+      "firstname": "Tester",
+      "lastname": "4",
+      "contact": "91234567",
+      "email": "aaa@bbb.com",
+      "course": "1010 - SQL Database",
+      "addate": "Fri, 22-January-2021",
+      "id": 10
+    },
+    {
+      "firstname": "Tester",
+      "lastname": "3",
+      "contact": "12312345",
+      "email": "312@ccc.com",
+      "course": "1009 - Angular",
+      "addate": "Tue, 12-January-2021",
+      "id": 11
+    },
+    {
+      "firstname": "Testing",
+      "lastname": "ssssss",
+      "contact": "12312345",
+      "email": "aaa@bbb.com",
+      "course": "1003 - JavaScript",
+      "addate": "Thu, 21-January-2021",
+      "id": 12
+    },
+    {
+      "firstname": "Tester",
+      "lastname": "3",
+      "contact": "91234567",
+      "email": "aaa@bbbbb.com",
+      "course": "1006 - JSON",
+      "addate": "Fri, 29-January-2021",
+      "id": 13
+    },
+    {
+      "firstname": "Tester",
+      "lastname": "4",
+      "contact": "",
+      "email": "aaa@bbb.com",
+      "course": "1009 - Angular",
+      "addate": "Sun, 10-January-2021",
+      "id": 14
+    },
+    {
+      "firstname": "Tester123",
+      "lastname": "123123",
+      "contact": "99112233",
+      "email": "123@321.com",
+      "course": "1001 - Full Stack Development",
+      "addate": "Tue, 26-January-2021",
+      "id": 15
+    }
+  ]
+}

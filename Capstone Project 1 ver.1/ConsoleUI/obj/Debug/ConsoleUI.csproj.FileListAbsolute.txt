@@ -1,0 +1,12 @@
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\bin\Debug\ConsoleUI.exe
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\bin\Debug\ConsoleUI.pdb
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\bin\Debug\Model.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\bin\Debug\Model.pdb
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\obj\Debug\ConsoleUI.csprojAssemblyReference.cache
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\obj\Debug\ConsoleUI.exe
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\obj\Debug\ConsoleUI.pdb
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\bin\Debug\DataAccess.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\ConsoleUI\bin\Debug\DataAccess.pdb

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!-- IIFE == Immediate-Invoked Function Expression -->
+    <script>
+        var id = 10;
+        var myvariable = (function () {
+            var id = 100;
+            return {
+                id
+            };
+        })();
+
+        myvariable.id = 20;
+        alert(id);
+
+    </script>
+</body>
+</html>

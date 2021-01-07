@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Contoso University</title>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            TotalCourses();
+            TotalStudents();
+        });
+
+        function TotalCourses() {
+
+            var courses = [];
+            $.get("http://localhost:3000/courses")
+                .done(function (response) {
+                    courses = response;
+                    $.each(courses, function (id) {
+                        $("#txtTotalCourses").val(courses.length);
+                    });
+                })
+        }
+
+        function TotalStudents() {
+
+            var students = [];
+            $.get("http://localhost:3000/students")
+                .done(function (response) {
+                    students = response;
+                    $.each(students, function (id) {
+                        $("#txtTotalStudents").val(students.length);
+                    });
+                })
+        }
+
+    </script>
+</head>
+<body style="background-color:aliceblue">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="./Index.html">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./Students.html">Students List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Courses.html">Courses List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./AddStudent.html">Register New Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./AddCourse.html">Register Course</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:80px">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Images/Students.png" alt="Students" width="600" height="200">
+                    <div class="carousel-caption">
+                        <h3>Students</h3>
+                        <p>Graduating from university!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/School.png" alt="School" width="600" height="200">
+                    <div class="carousel-caption">
+                        <h3>School</h3>
+                        <p>Going to school...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/Generations.png" alt="Generations" width="600" height="200">
+                    <div class="carousel-caption">
+                        <h3 style="color:black">Generations</h3>
+                        <p style="color:black">The different generations~</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+        <br />
+
+        <div class="row text-white">
+            <div class="col bg-info text-center">
+                <h1 class="display-4"><input type="text" id="txtTotalStudents" style="color:white; background-color:transparent; border:hidden; text-align:center" disabled /></h1>
+                <p>STUDENTS REGISTERED</p>
+            </div>
+            <div class="col bg-warning text-center">
+                <h1 class="display-4"><input type="text" id="txtTotalCourses" style="color:black; background-color:transparent; border:hidden; text-align:center" disabled /></h1>
+                <p style="color:black">COURSES REGISTERED</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

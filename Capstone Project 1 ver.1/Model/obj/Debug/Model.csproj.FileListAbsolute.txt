@@ -1,0 +1,6 @@
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\Model\bin\Debug\Model.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\Model\bin\Debug\Model.pdb
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\Model\obj\Debug\Model.csprojAssemblyReference.cache
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\Model\obj\Debug\Model.dll
+F:\Microsoft Visual Studio\Projects\ContonsoUniversity\Model\obj\Debug\Model.pdb

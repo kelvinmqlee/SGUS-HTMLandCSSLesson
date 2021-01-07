@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function Customer() {
+            // there is no 'this' in the function
+            var _name = "";
+            var _address = "";
+            var _add = function () {
+                if (_name.length == 0) {
+                    alert("Name is required");
+                }
+            };
+
+            return {
+                name: _name,
+                address: _address,
+                Add: _add
+            }
+        }
+        
+        Customer();
+        var x = new Customer();
+        x.name = "Kelvin";
+        x.Add();
+    </script>
+</body>
+</html>

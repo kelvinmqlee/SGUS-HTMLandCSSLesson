@@ -1,0 +1,4 @@
+﻿To cache files locally - Application Manifest W3C
+Old version of Chrome and Mozilla supported
+Service worker W3C
+Step 1 - Worker.js

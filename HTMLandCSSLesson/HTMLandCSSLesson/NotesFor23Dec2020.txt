@@ -1,0 +1,8 @@
+﻿x variable not defined - reference error
+when you declare and do not assign - undefined
+variable declaration gets MOVED UP to the top nearer Scope
+without 'var', the variable becomes global - it spills out as a global variable
+JavaScript validation
+HTTP Request ==> Jquery, Angular...
+Scopes, Lexical, Hoisting, Global polluting
+Session Storage, Local Storage, Cookies

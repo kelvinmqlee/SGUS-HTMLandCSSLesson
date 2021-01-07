@@ -1,0 +1,21 @@
+﻿SUMMARY OF WHAT WE HAVE LEARNED FOR HTML AND JAVASCRIPT
+========================================================
+
+HTML -- SGML ==> XML, HTML
+Well-formed -- <with open tag></with close tag>; not well-formed -- <with open tag and />
+DOCTYPE
+HTML -- Head -- Body
+Title tag -- Content on title bar
+Bold <B>, Underline <U>, Italic <I>, Img, H1, H2, H3, H4, H5, H6, Font, A href, Link href, src, Div, Paragraph <P> tags
+Form, Input type text, button
+CSS -- Uniform look and feel; Selector{ background-color:blue }
+In-line, External
+Case-Sensitive, semi-colon (;)
+var x = 0; inferred -- variables
+Dynamic Language
+Literal, Constructor way of creating object
+Button wrote click invoked JavaScript function
+DOM -- Document object
+Window -- Document, Form, Element
+document.getElementByID("id123").value;
+IF, CASE, DO, WHILE

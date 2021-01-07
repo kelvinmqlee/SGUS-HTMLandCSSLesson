@@ -1,0 +1,37 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Student 1",
+      "class": "FSD Cohort 2"
+    },
+    {
+      "id": 2,
+      "name": "Student 2",
+      "class": "FSD Cohort 2"
+    },
+    {
+      "id": 3,
+      "name": "Student 3",
+      "class": "FSD Cohort 2"
+    },
+    {
+      "id": 4,
+      "name": "Kelvin Lee",
+      "class": "Cohort 2"
+    },
+    {
+      "name": "Tester 1",
+      "class": "Cohort 1",
+      "id": 5
+    },
+    {
+      "name": "Tester 2",
+      "class": "Cohort 3",
+      "id": 6
+    }
+  ],
+  "courses": [
+    {}
+  ]
+}

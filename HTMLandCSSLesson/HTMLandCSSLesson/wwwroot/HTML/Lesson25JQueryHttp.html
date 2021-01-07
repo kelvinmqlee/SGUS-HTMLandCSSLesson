@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<!-- <body onload="GetStudentRecords()"> // this runs during page loading -->
+<body>
+    <table>
+        <tr>
+            <td>ID:</td>
+            <td><input type="text" id="txtId" disabled /></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="txtName" /></td>
+        </tr>
+        <tr>
+            <td>Class:</td>
+            <td><input type="text" id="txtClass" /></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="button" id="btnCreate" value="Create New Student Record" onclick="SaveStudentRecord()" /></td>
+            <td><input type="button" id="btnUpdate" value="Update After Editing" onclick="UpdateRecord()" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="Get Student Records" onclick="GetStudentRecords()" /></td>
+        </tr>
+    </table>
+
+    <table id="tbl1" border="1">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>CLASS</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+    <script>
+        // this runs after the page finishes loading
+        $(document).ready(function () {
+            $("#btnUpdate").hide();
+            GetStudentRecords();
+        });
+
+        function SaveStudentRecord() {
+            if (($("#txtName").val() == "") || ($("#txtClass").val() == "")) {
+                alert("Both fields are required to fill in.")
+            } else {
+                var student = {};
+                student.name = $("#txtName").val();
+                student.class = $("#txtClass").val();
+
+                $.post("http://localhost:3000/students", student)
+                    .done(response => SuccessSave(response))
+                    .fail(response => Error(response));
+                return false;
+            }
+        }
+
+        function GetStudentRecords() {
+            $.get("http://localhost:3000/students")
+                .done(response => SuccessGet(response))
+                .fail(response => Error(response));
+        }
+
+        function SuccessSave(response) {
+            alert("Student Record successfully created.");
+
+            // clear textboxes with Toggle effects
+            $("#txtId").val("").slideToggle().slideToggle();
+            $("#txtName").val("").slideToggle().slideToggle();
+            $("#txtClass").val("").slideToggle().slideToggle();
+
+            GetStudentRecords();
+        }
+
+        function SuccessGet(response) {
+            // clear all rows so that you do not see duplicates
+            // $("#tbl1 tr").remove();
+            $("#tbl1 tr:not(:first)").remove();
+
+            for (temp of response) {
+                $("#tbl1").append('<tr id="' + temp.id + '"><td>'
+                    + temp.id + '</td><td>'
+                    + temp.name + '</td><td>'
+                    + temp.class + '</td><td>'
+                    + '<a href="#" onclick="EditRecord(' + temp.id + ')">Edit</a></td><td>'
+                    + '<a href="#" onclick="DeleteRecord(' + temp.id + ')">DELETE</a></td></tr>');
+            }
+        }
+
+        function SuccessUpdate(response) {
+            alert("Student Record successfully updated.");
+
+            // clear textboxes with Toggle effects
+            $("#txtId").val("").fadeToggle().fadeToggle();
+            $("#txtName").val("").fadeToggle().fadeToggle();
+            $("#txtClass").val("").fadeToggle().fadeToggle();
+
+            GetStudentRecords();
+        }
+
+        function SuccessDelete(response) {
+            GetStudentRecords();
+        }
+
+        function Error(response) {
+            alert("Error!");
+            console.log(response);
+        }
+
+        function EditRecord(id) {
+            $("#btnCreate").fadeOut();
+            $("#btnUpdate").fadeIn();
+
+            // extracting the value from the TR
+            var tdId = $("#tbl1").find('tr:eq(' + id + ')').find('td:eq(0)');
+            var sId = tdId.html(); // value
+            var tdName = $("#tbl1").find('tr:eq(' + id + ')').find('td:eq(1)');
+            var sName = tdName.html();
+            var tdClass = $("#tbl1").find('tr:eq(' + id + ')').find('td:eq(2)');
+            var sClass = tdClass.html();
+
+            // set the values
+            $("#txtId").val(sId);
+            $("#txtName").val(sName);
+            $("#txtClass").val(sClass);
+        }
+
+        function UpdateRecord(student) {
+            var student = {};
+            student.id = $("#txtId").val();
+            student.name = $("#txtName").val();
+            student.class = $("#txtClass").val();
+
+            $.ajax({
+                url: "http://localhost:3000/students/" + student.id,
+                type: 'PUT',
+                data: student
+            })
+                .done(response => SuccessUpdate(response))
+                .fail(response => Error(response));
+            $("#btnCreate").fadeIn();
+            $("#btnUpdate").fadeOut();
+        }
+
+        function DeleteRecord(id) {
+            if (confirm("Are you sure you wish to Delete this Record?") == true) {
+            $.ajax({
+                url: "http://localhost:3000/students/" + id,
+                type: 'DELETE',
+            })
+                .done(response => SuccessDelete(response))
+                .fail(response => Error(response));
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

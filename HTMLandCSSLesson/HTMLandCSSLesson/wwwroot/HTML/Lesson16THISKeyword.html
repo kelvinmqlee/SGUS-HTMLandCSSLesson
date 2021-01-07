@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        // window --> document --> form --> element
+        var x = 20;
+
+        function Test() {
+            this.y = 40;
+            alert("Test");
+        }
+
+        // Create Closure ---> Read up about Closure and "IIFE"
+        //function Func1() {
+        //    var y = 10;
+        //    return {y}
+        //}
+
+        alert(window.x);
+        alert(this.x);
+        // Statement 1 - every code you write; every HTML element
+        // it becomes a part of the Main Window automatically
+        window.Test();
+        // Statement 2 - 'this' is That Window of the Document Object Model (DOM)
+        this.Test();
+        // Statement 3 - When you set 'this', variables spill out to the Main Window
+        // Global polluting...
+
+        // Statement 4 - When you use new instances, there are different instances of 'this'
+        var t1 = new Test();
+        t1.y = 100; // this is now a part of the new instance
+        
+        var t2 = new Test();
+        t2.y = 400; // this is now a part of the new instance
+
+        alert(this.y);
+    </script>
+</body>
+</html>

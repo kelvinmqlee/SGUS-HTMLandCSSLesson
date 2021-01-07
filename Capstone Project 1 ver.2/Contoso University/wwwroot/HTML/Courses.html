@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            GetCourseRecords();
+
+            $("#tblCourses").DataTable({
+                ajax: {
+                    url: '../db.json',
+                    dataSrc: 'courses'
+                },
+                "columns": [
+                    null,
+                    null,
+                    null,
+                    {
+                        "data": null,
+                        "defaultContent": "<button><img src='../Images/EditIcon.png'></img></button>",
+                        "data": null,
+                        "defaultContent": "<button><img src='../Images/DeleteIcon.png'></img></button>"
+                    }
+                ]
+            });
+        });
+
+        function GetCourseRecords() {
+            $.get("http://localhost:3000/courses")
+                .done(response => SuccessGet(response))
+                .fail(response => Error(response));
+
+            $("#txtId").val() == "";
+            $("#btnUpdate").hide();
+            $("#txtCourseId").hide();
+            $("#txtCourseTitle").hide();
+        }
+
+        function SuccessGet(response) {
+            // clear all rows so that you do not see duplicates
+            // $("#tblCourses tr").remove();
+            $("#tblCourses tr:not(:first)").remove();
+
+            for (temp of response) {
+                $("#tblCourses").append('<tr id="' + temp.id + '"><td align="center">'
+                    + temp.id + '</td><td align="center">'
+                    + temp.courseid + '</td><td align="center">'
+                    + temp.coursetitle + '</td><td align="center">'
+                    + '<a href="#" onclick="EditRecord(' + temp.id + ')"><img src="../Images/EditIcon.png"></img></a></td><td>'
+                    + '<a href="#" onclick="DeleteRecord(' + temp.id + ')"><img src="../Images/DeleteIcon.png"></img></a></td></tr>');
+            }
+        }
+
+        function SuccessUpdate(response) {
+            alert("Course Record successfully updated.");
+            $("#txtId").val("");
+
+            GetCourseRecords();
+        }
+
+        function SuccessDelete(response) {
+            GetCourseRecords();
+        }
+
+        function Error(response) {
+            alert("Error!");
+            console.log(response);
+        }
+
+        function EditRecord(id) {
+            $("#btnUpdate").fadeIn();
+            $("#txtCourseId").fadeIn();
+            $("#txtCourseTitle").fadeIn();
+
+            // extracting the value from the TR
+            var tdId = $("#tblCourses").find('tr:eq(' + id + ')').find('td:eq(0)');
+            var sId = tdId.html(); // value
+            var tdCourseId = $("#tblCourses").find('tr:eq(' + id + ')').find('td:eq(1)');
+            var sCourseId = tdCourseId.html();
+            var tdCourseTitle = $("#tblCourses").find('tr:eq(' + id + ')').find('td:eq(2)');
+            var sCourseTitle = tdCourseTitle.html();
+
+            // set the values
+            $("#txtId").val(sId);
+            $("#txtCourseId").val(sCourseId);
+            $("#txtCourseTitle").val(sCourseTitle);
+        }
+
+        function UpdateRecord(course) {
+            if (($("#txtCourseId").val() == "")) {
+                alert("[Course ID] is required to be filled in.");
+                return false;
+            }
+            if (($("#txtCourseTitle").val() == "")) {
+                alert("[Course Title] is required to be filled in.");
+                return false;
+            }
+
+            else {
+                var course = {};
+                course.id = $("#txtId").val();
+                course.courseid = $("#txtCourseId").val();
+                course.coursetitle = $("#txtCourseTitle").val();
+
+                $.ajax({
+                    url: "http://localhost:3000/courses/" + course.id,
+                    type: 'PUT',
+                    data: course
+                })
+                    .done(response => SuccessUpdate(response))
+                    .fail(response => Error(response));
+                return false;
+            }
+
+            $("#btnUpdate").fadeOut();
+            $("#txtCourseId").fadeOut();
+            $("#txtCourseTitle").fadeOut();
+        }
+
+        function DeleteRecord(id) {
+            if (confirm("Are you sure you wish to Delete this Record?") == true) {
+                $.ajax({
+                    url: "http://localhost:3000/courses/" + id,
+                    type: 'DELETE',
+                })
+                    .done(response => SuccessDelete(response))
+                    .fail(response => Error(response));
+                return false;
+            }
+        }
+    </script>
+</head>
+<body style="background-color:aliceblue">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="./Index.html">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./Students.html">Students List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Courses.html">Courses List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./AddStudent.html">Register New Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./AddCourse.html">Register Course</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:80px">
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td><input type="text" id="txtId" placeholder=" " disabled /></td>
+            </tr>
+            <tr>
+                <td>Course ID:</td>
+                <td><input type="text" id="txtCourseId" /></td>
+            </tr>
+            <tr>
+                <td>Course Title:</td>
+                <td><input type="text" id="txtCourseTitle" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="btnUpdate" value="Update After Editing" onclick="UpdateRecord()" /></td>
+            </tr>
+        </table>
+
+        <table id="tblCourses" border="1">
+            <thead>
+                <tr>
+                    <th align="center">ID</th>
+                    <th align="center">COURSE ID</th>
+                    <th align="center">COURSE TITLE</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function SaveCourseRecord() {
+            if (($("#txtCourseId").val() == "")) {
+                alert("[Course ID] is required to be filled in.");
+                return false;
+            }
+            if (($("#txtCourseTitle").val() == "")) {
+                alert("[Course Title] is required to be filled in.");
+                return false;
+            }
+            else {
+                var course = {};
+                course.courseid = $("#txtCourseId").val();
+                course.coursetitle = $("#txtCourseTitle").val();
+
+                $.post("http://localhost:3000/courses", course)
+                    .done(response => SuccessSave(response))
+                    .fail(response => Error(response));
+                return false;
+            }
+        }
+
+        function SuccessSave(response) {
+            alert("Course Record successfully created.");
+
+            // clear textboxes with Toggle effects
+            $("#txtCourseId").val("").slideToggle().slideToggle();
+            $("#txtCourseTitle").val("").slideToggle().slideToggle();
+
+        }
+
+        function Error(response) {
+            alert("Error!");
+            console.log(response);
+        }
+    </script>
+</head>
+
+<body style="background-color:aliceblue">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="./Index.html">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./Students.html">Students List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Courses.html">Courses List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./AddStudent.html">Register New Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./AddCourse.html">Register Course</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:80px">
+        <table>
+            <tr>
+                <td>Course ID:</td>
+                <td><input type="text" id="txtCourseId" /></td>
+            </tr>
+            <tr>
+                <td>Course Title:</td>
+                <td><input type="text" id="txtCourseTitle" /></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="button" id="btnCreate" value="Register Course" onclick="SaveCourseRecord()" /></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

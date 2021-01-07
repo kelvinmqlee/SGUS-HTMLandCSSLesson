@@ -1,0 +1,12 @@
+﻿Containers
+Grid Basic
+Tables
+Button
+Navbar
+Forms
+Cards
+
+Command to run JSON Server
+=============================
+in wwwroot folder ==>
+json-server --watch db.json

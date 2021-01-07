@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="file" accept="text/*" onchange="ReadFile(this)" />
+    <textarea id="txt1"></textarea>
+
+    <script>
+        function ReadFile(input) {
+            let path = input.files[0]; // the first file from the multiple selection
+
+            var Reader = new FileReader();
+            Reader.readAsText(path); // may take some time to read
+
+            Reader.onload = function () {
+                document.getElementById("txt1").value = "";
+                document.getElementById("txt1").value += Reader.result;
+            };
+        }
+    </script>
+</body>
+</html>

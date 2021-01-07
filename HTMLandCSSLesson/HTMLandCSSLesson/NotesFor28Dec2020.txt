@@ -1,0 +1,13 @@
+﻿Software Development Life Cycle (SDLC): Requirements -> Technical Design -> Development -> 
+										Testing (System Testing -> User Acceptance Testing) -> Maintenance (Go Live)
+Stakeholders sign off @ Requirements phase, User Acceptance Testing phase and Go Live phase.
+
+Geo-Mapping:
+A Map API (also known as Mapping API) provides location intelligence for software developers creating location-based products and services. It is the base building block for location-aware applications, feature-rich maps and the retrieval of geographic-related data. It allows you to create location-aware infographics, mind maps and visualization aids.
+
+A typical Map API includes features for geocoding, reverse geocoding, geolocation, directions and navigation, touch-screen interaction, different types of maps (e.g. terrain or satellite) and customizable control objects.
+
+Run Unit Test - Karma, Jasmine
+We will run the test manually and test it.
+Test Case 1: Equal password == OK
+Test Case 2: Not equal password == see error

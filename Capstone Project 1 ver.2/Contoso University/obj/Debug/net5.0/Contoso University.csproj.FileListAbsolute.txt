@@ -1,0 +1,40 @@
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\appsettings.Development.json
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\appsettings.json
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.exe
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.deps.json
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.runtimeconfig.json
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.runtimeconfig.dev.json
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.dll
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\ref\Contoso University.dll
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.pdb
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.Views.dll
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\bin\Debug\net5.0\Contoso University.Views.pdb
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.csprojAssemblyReference.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.GeneratedMSBuildEditorConfig.editorconfig
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.AssemblyInfoInputs.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.AssemblyInfo.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.csproj.CoreCompileInputs.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.MvcApplicationPartsAssemblyInfo.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.RazorAssemblyInfo.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.RazorAssemblyInfo.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\staticwebassets\Contoso University.StaticWebAssets.Manifest.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\staticwebassets\Contoso University.StaticWebAssets.xml
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\scopedcss\bundle\Contoso University.styles.css
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.TagHelpers.input.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.TagHelpers.output.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.RazorCoreGenerate.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.RazorTargetAssemblyInfo.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.RazorTargetAssemblyInfo.cs
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.Views.pdb
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.dll
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\ref\Contoso University.dll
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.pdb
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.genruntimeconfig.cache
+F:\Microsoft Visual Studio\Projects\Capstone Project 1 ver.2\Contoso University\obj\Debug\net5.0\Contoso University.csproj.CopyComplete
