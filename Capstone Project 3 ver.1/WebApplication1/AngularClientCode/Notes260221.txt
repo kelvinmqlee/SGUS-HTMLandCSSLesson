@@ -1,0 +1,67 @@
+TypeScript, Strongly typed
+tsconfig, Import and Export From
+
+Using CLI to create your first Angular application
+ng serve, boot strap Angular cycle
+templateUrl
+
+All UI code, CSS will move to Angular
+Razor code becomes less signicant
+
+ng serve - Compiles the Angular project IN MEMORY (RAM)
+
+    as you make changes (------incomplete sentence here ------)
+ng build - Compiles the Angular project on the harddisk drive
+
+Binding the UI with model and displaying in expression
+
+Add object to In-memory collection and display it on table
+
+Make HTTP calls from Angular to MVC Core...
+- HttpClient, post
+- Cross-Origin Resource Sharing (CORS) enable, preflight
+- 200OK, 500 Internal Error
+- Suppress Capitalization
+
+Two webservers (Kestrel and IIS)
+
+Angular application runs on http://localhost:4200
+MVC Core application runs on https://localhost:44381
+
+Client side Validation on Angular
+- Customer Name == Required, Pure String check
+- Address -- Required
+
+WebAPI, REST
+- WebAPI follows HTTP Protocol very religiously
+- CRUD -- (Create - POST (Insert), Read - GET (Search), Update - PUT (Update), Delete)
+- 500 Internal Server Error, 200Ok, 404 Not Found -- HTTP Status Codes
+- It deals only with data -- JSON, XML
+
+MVC Controller = Data + View + Flexibility (Non-Standard)
+API Controller = Data + Protocol (Standard)
+
+IActionResult = Data + Status Code
+IEnumerable = Data only
+
+HttpGet on ngOnInit vs Constructor
+
+Constructor concept does not belong to Angular
+- there is no guarantee that view is completely initialized
+- use constructor for non-view initialization like Dependency Injection (DI)
+
+ngOnInit() belongs to Angular
+- binding has been done and executed
+- more UI-related initialization
+
+EF Database first vs EF Code first
+
+1 to Many, EF Core, Include (eager loading)
+
+Use lodash(_ underscorejs) to copy
+- npm install lodash -- Main Framework
+- npm install @types/lodash -- for IntelliSense
+
+Fix Search Screen and Routing
+
+JWT Token, Oauth, Owin...

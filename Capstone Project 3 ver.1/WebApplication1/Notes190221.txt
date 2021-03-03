@@ -1,0 +1,38 @@
+﻿Adding the Customer Db using EF Core
+- In UI we made the Submit button and we defined the action
+- We are creating a model (class)
+- The name of the properties of this class should be the same as 
+  the text box name
+
+Displayed records on the UI
+
+LINQ - Language INtegrated Query (Basic)
+
+LINQ to SQL using SQL Server Profiler
+
+Setting validation using Data annotations
+
+Strongly typed views
+
+Displaying Error message
+
+Custom mapping using Request.Form[]
+
+ViewModel -- Mapping multiple models
+
+HTTP is a stateless protocol
+- To make it stateful we need to use Session
+- Session stores value in the cookies
+- Tempdata
+- Viewdata
+- Session variable
+
+Dependency Injection (DI), Inversion of Control (IoC)
+
+Reading configuration from appsettings.json file and configure EF Core
+
+NodeJS and NPM
+- Package.json and Package.lock.json
+^, ~, absolute
+
+*EF Core Select with LINQ, Delete, Update -- can ignore this line*

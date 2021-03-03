@@ -1,0 +1,28 @@
+﻿@*small 'm' for reference - @model*@
+@model List<WebApplication1.Models.Customer>
+
+@{
+    Layout = null;
+}
+
+<form action="/Customer/Search" method="get">
+    Name: <input type="text" name="customerName" value="" />
+    <input type="submit" value="Search" />
+</form>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Address</td>
+    </tr>
+
+    @if (Model != null)
+    {
+        @foreach (var cust in Model) // capital 'M' for object - Model
+        {
+            <tr>
+                <td>@cust.customerName</td>
+                <td>@cust.address</td>
+            </tr>
+        }
+    }
+</table>

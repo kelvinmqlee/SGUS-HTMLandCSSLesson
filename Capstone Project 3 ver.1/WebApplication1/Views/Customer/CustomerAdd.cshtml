@@ -1,0 +1,25 @@
+﻿@model WebApplication1.ViewModels.CustomerViewModel
+
+@{
+    Layout = null;
+}
+
+<form action="/Customer/Add" method="post">
+    Name: <input type="text" name="txtcustomerName" 
+                 value="@Model.customer.customerName"/>
+    <br />
+    Address: <input type="text" name="txtaddress" 
+                    value="@Model.customer.address"/>
+    <br />
+    <input type="submit" value="Add Customer" />
+</form>
+<br />
+
+@if (Model != null)
+{
+    @foreach (var error in Model.errors)
+    {
+        @error.ErrorMessage
+        <br />
+    }
+}
